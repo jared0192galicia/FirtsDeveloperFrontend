@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etiquetas HTML</title>
+    <title>Tipos de Selectores</title>
+    <style>
+        /* fondo con selector global */
+        * {
+            background-color: grey;
+        }
+        /* fondo a div con selector normal */
+        div {
+            background: burlywood;
+        }
+        /* Fondo a div con selector clase */
+        .titulo {
+            background-color: aquamarine;
+        }
+        /* Fondo a div con un selector de id */
+        #titulo2 {
+            background-color: brown;
+            color: azure;
+        }
+        /* Fondo hacia a con selector a */
+        a[href = "https://platzi.com/home"] {
+            background-color: black;
+            color: aquamarine;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Se combina con css para crear pestañas -->
-    <nav>
-        <ul>
-            <li>abaud as</li>
-            <li>Contac</li>
-            <li>more</li>
-        </ul>
-    </nav>
-    <section>
-        <!-- Usamos div para empaquetar una img en unsa sola seccion  -->
-        <div>
-            <img src="https://images.pexels.com/photos/4308937/pexels-photo-4308937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image">
-        </div>
-        <!-- Ponemos subtitulo h1 y su txt p -->
-        <div>
-            <h1>Cuidad h1</h1>
-            <p> foto de una Cuidad de quien sabe donde p</p>
-        </div>
-    </section>
-    <!-- Bloque para un input name -->
-    <form action="">
-        <label for="name">Name</label>
-        <input type="text" id = "name">
-    </form>
-    <!-- url con texto -->
-    <a href="https://www.pexels.com/es-es/foto/ciudad-cielo-punto-de-referencia-nublado-4308937/">Referencias fotograficas</a>
+    <!-- div con clase -->
+    <div class="titulo">Titulo de clase</div>
+    <!-- div normal -->
+    <div>div sin clase</div>
+    <!-- div con id -->
+    <div id = "titulo2">div con un id</div>
+    <!-- url -->
+    <a href="https://platzi.com/home">Platzi</a>
 </body>
 </html>
