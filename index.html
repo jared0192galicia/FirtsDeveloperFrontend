@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipos de Selectores</title>
+    <title>Selectores combinadores</title>
     <style>
-        /* fondo con selector global */
-        * {
-            background-color: grey;
+        /* Propiedades con conbinador decendiente */
+        div p {
+            color: lime;
         }
-        /* fondo a div con selector normal */
-        div {
-            background: burlywood;
+        /* Propiedades con conbinador directo > */
+        div > section {
+            color: blue;
         }
-        /* Fondo a div con selector clase */
-        .titulo {
-            background-color: aquamarine;
+        /* Propiedades con conbinador adyacente > */
+        div + section {
+            color: brown;
+            /* aplica sobre el primer section que encuentre despues de un div */
         }
-        /* Fondo a div con un selector de id */
-        #titulo2 {
-            background-color: brown;
-            color: azure;
+        
+        /* Propiedades con conbinador de hermanos > */
+        section ~ div {
+            color: teal;
         }
-        /* Fondo hacia a con selector a */
-        a[href = "https://platzi.com/home"] {
-            background-color: black;
-            color: aquamarine;
-        }
-
     </style>
 </head>
 <body>
-    <!-- div con clase -->
-    <div class="titulo">Titulo de clase</div>
-    <!-- div normal -->
-    <div>div sin clase</div>
-    <!-- div con id -->
-    <div id = "titulo2">div con un id</div>
-    <!-- url -->
-    <a href="https://platzi.com/home">Platzi</a>
+    <div>
+        <p>color lima</p>
+        <p>Se supone que tambien</p>
+        <p>Y este igual</p>
+        <section>
+            <h1>Hijo directo</h1>
+        </section>
+    </div>
+    <section>
+        Combinador adyacente
+    </section>
+    <div>Selector con ~</div>
+    <div>Creo que yo igual</div>
+    <div>y yo</div>
 </body>
 </html>
